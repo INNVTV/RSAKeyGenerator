@@ -7,6 +7,8 @@ namespace RSAKeyGenerator
 {
     class Program
     {
+        private const int keySize = 2048;
+
         static void Main(string[] args)
         {
             // Generate Private/Public Key Pair
@@ -47,7 +49,7 @@ namespace RSAKeyGenerator
         {
             //Uses: using System.Security.Cryptography;
 
-            RSACryptoServiceProvider myRSA = new RSACryptoServiceProvider(2048);
+            RSACryptoServiceProvider myRSA = new RSACryptoServiceProvider(keySize);
             //RSAParameters publicKey = myRSA.ExportParameters(true);
 
             #region RSA Algorithm, XML Structure and Properties
